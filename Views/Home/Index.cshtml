@@ -1,0 +1,28 @@
+﻿@model IndexViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<h1>Burası Home/Index</h1>
+@*Html.Partial, sayfaları küçük parçalara ayırmak için kullanılabilir 
+Örnek : bir sayfan var ve her sayfa da görünecek bir kampanya bölümün var, 
+kampanya bölümü partial olarak tasarlayabilirsiniz.
+Partial ile çalışmak ve tasarımınızı parçalara bölmek kod yazma hızını artırır,
+ çünkü, kocaman bir sayfada her bir bölümü ayrı ayrı bulmak oldukça zordur
+ancak sayfanı belirli bölümlere ayırıp her bir bölümü partial yapmak, hem daha düzenli 
+hemde daha kolau geliştirme yapmanızı sağlar!!
+*@
+@Html.Partial("ImgPartial",Model)
+
+@* html.partial 
+    buraya baska bir cshtml dosyasını getirir.
+*@
+
+<h1>Burası Home Index</h1>
